@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  width: 250px;
+  height: 100px;
+  
+  animation: App-logo-zoom 6s ;
+  transform: scale(2.6);
+}
+
+.App-header {
+  background-color: gold;
+  height: 150px;
+  padding: 15px;
+  color: black;
+}
+
+.App-title {
+  font-size: 1.1em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-root {
+  background: grey;
+  height: 100px;
+  padding: 20px;
+}
+@keyframes App-logo-zoom {
+  from { transform: scale(0.1); }
+  to { transform: scale(2.6); }
+}

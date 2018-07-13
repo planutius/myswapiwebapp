@@ -6,14 +6,14 @@
   width: 250px;
   height: 100px;
   
-  animation: App-logo-zoom 6s ;
+  animation: App-logo-zoom 1s ;
   transform: scale(2.6);
 }
 
 .App-header {
   background-color: gold;
-  height: 150px;
-  padding: 15px;
+  height: 160px;
+  padding: 20px;
   color: black;
 }
 
@@ -21,16 +21,37 @@
   font-size: 1.1em;
 }
 
-.App-intro {
-  font-size: large;
+.App-Options {
+  background: grey;
+  
 }
 
-.App-root {
-  background: grey;
-  height: 100px;
-  padding: 20px;
+.button-opt{
+  cursor: pointer;
+  border-style: solid 5px;
+  border-color: black;
 }
+.button-opt:hover {
+  background-color: gold;
+  font-weight: bold;
+  
+  
+}
+
+
+/*
+a:hover {
+  margin: 20px;
+  color: gold;
+  border-bottom: 5px solid gold;
+}
+a:focus {
+  background-color: black;
+  color: gold;
+  border-bottom: 5px solid gold;
+}
+*/
 @keyframes App-logo-zoom {
-  from { transform: scale(0.1); }
+  from { transform: scale(18); }
   to { transform: scale(2.6); }
 }

@@ -1,9 +1,30 @@
 import React, { Component } from 'react';
 import swlogo from './star-wars-logo.svg';
 import './App.css';
-import Root from '../components/Root';
+import Options from '../components/Options';
+import Scroll from '../components/Scroll';
+import CardList from '../components/CardList';
+//import GetData from '../components/GetData';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      url: '',
+      datos: []
+    }
+  }
+  
+  componentDidMount() {
+
+    fetch(this.state.url)
+    .then(response => response.json())
+    .then(results => {
+        this.setState.datos = results;
+        });
+  
+}
+
   render() {
     return (
       <div className="App">
@@ -11,7 +32,10 @@ class App extends Component {
           <img src={swlogo} className="App-logo" alt="logo" />
           <h1 className="App-title">Web App using SWAPI and React Exercise</h1>
         </header>
-        <Root className="App-root" />
+        <Options />
+        <Scroll>
+          <CardList datos={this.state.datos}/>
+        </Scroll>
       </div>
     );
   }

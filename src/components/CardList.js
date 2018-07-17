@@ -3,24 +3,28 @@ import Card from './Card';
 
 
 const CardList = ({ datos }) => {
-    
-    return (
-        <div>
-            {
-               Object.entries(datos).map((data,i) => {
-                    return ( 
-                        <Card
-                            key={i} 
-                            name={datos[i].name} 
-                            height={datos[i].height}
-                            gender= {datos[i].gender}
+    if (!datos) {
+        return <div>Error</div>;
+      } else {
+        return (
+            
+            <div><p>What tha fuck!</p>
+                {
+                Object.entries(datos).map((data,i) => {
+                        return ( 
+                            <Card
+                                key={i} 
+                                name={data[i].name} 
+                                height={data[i].height}
+                                gender= {data[i].gender}
 
-                        />
-                    );
-                })
-            }
-        </div>
-    );
+                            />
+                        );
+                    })
+                }
+            </div>
+        );
+    }  
 }
 
     

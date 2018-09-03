@@ -41,7 +41,7 @@ class Options extends React.Component {
             {
                 Object.entries(items).map(([key, value]) => {
                    return (<button className=" f6 grow br-pill ph3 pv2 mb2 mt2 mh1 dib black button-opt" 
-                   key={key} onClick={console.log(value)} > { key } </button>);
+                   key={key} onClick={getData(value)}> { key } </button>);
                 })
             }
           </div>

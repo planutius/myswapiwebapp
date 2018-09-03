@@ -7,25 +7,25 @@ import CardList from '../components/CardList';
 //import GetData from '../components/GetData';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super()
     this.state = {
-      url: '',
+      url: 'https://swapi.co/api/people/',
       datos: []
     }
   }
-  
+
   componentDidMount() {
 
     fetch(this.state.url)
-    .then(response => response.json())
-    .then(results => {
-        this.setState.datos = results;
-        });
-  
-}
+      .then(response => response.json())
+      .then(results =>
+        this.setState({datos: results.results})); 
+
+  }
 
   render() {
+    
     return (
       <div className="App">
         <header className="App-header">
@@ -34,7 +34,7 @@ class App extends Component {
         </header>
         <Options />
         <Scroll>
-          <CardList datos={this.state.datos}/>
+          <CardList datos={this.state.datos} />
         </Scroll>
       </div>
     );

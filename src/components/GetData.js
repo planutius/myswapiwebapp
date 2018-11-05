@@ -1,3 +1,5 @@
+
+//Usaremos este componente para cargar diferentes datos de SWAPI
 import React from 'react';
 
 const GetData = (url) => {

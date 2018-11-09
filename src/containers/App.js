@@ -19,8 +19,8 @@ class App extends Component {
 
     fetch(this.state.url)
       .then(response => response.json())
-      .then(results =>
-        this.setState({datos: results.results})); 
+      .then(data =>
+        this.setState({datos: data})); 
 
   }
 
@@ -34,7 +34,7 @@ class App extends Component {
         </header>
         <Options />
         <Scroll>
-          <CardList datos={this.state.datos} />
+          <CardList datos={this.state.datos.results} />
         </Scroll>
       </div>
     );

@@ -12,7 +12,7 @@ const CardList = ({datos}) => {
                 />
         );
     })
-    console.log(cardArray);
+  
     if (cardArray.lenght === 0) {
         return <div>Cargando datos...</div>;
       } else {

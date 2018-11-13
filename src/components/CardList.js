@@ -3,15 +3,18 @@ import Card from './Card';
 
 
 const CardList = ({datos}) => {
-    const cardArray = datos.map((item, i) => {
-        return (<Card
-                    id={i} 
-                    name={item[i].name}
-                    height={item[i].height}
-                    gender={item[i].gender}
+    var items = datos;
+
+    const cardArray = items.map((data, index) => {
+        return (
+                <Card
+                    id={index} 
+                    name={data.name}
+                   /* height={value[key].height}
+                    gender={value[key].gender}*/
                 />
         );
-    })
+     });
   
     if (cardArray.lenght === 0) {
         return <div>Cargando datos...</div>;

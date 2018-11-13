@@ -10,17 +10,16 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      url: 'https://swapi.co/api/people/',
-      datos: []
+      
+      items: []
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
 
-    fetch(this.state.url)
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
-      .then(data =>
-        this.setState({datos: data})); 
+      .then(items => this.setState({items: items}));
 
   }
 
@@ -34,7 +33,7 @@ class App extends Component {
         </header>
         <Options />
         <Scroll>
-          <CardList datos={this.state.datos.results} />
+          <CardList datos={this.state.items} />
         </Scroll>
       </div>
     );

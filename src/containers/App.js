@@ -10,17 +10,16 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      
       items: []
     }
   }
 
   componentWillMount() {
-
-    fetch('https://jsonplaceholder.typicode.com/users')
+    
+    fetch('https://swapi.co/api/people/')
       .then(response => response.json())
-      .then(items => this.setState({items: items}));
-
+      .then(json => this.setState({items: json}));
+      
   }
 
   render() {

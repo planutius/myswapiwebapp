@@ -14,27 +14,30 @@ class App extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     
     fetch('https://swapi.co/api/people/')
       .then(response => response.json())
-      .then(json => this.setState({items: json}));
-      
+      .then(data => {
+        this.setState({
+          items: data
+        });
+      });
   }
 
   render() {
     
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={swlogo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Web App using SWAPI and React Exercise</h1>
-        </header>
-        <Options />
-        <Scroll>
-          <CardList datos={this.state.items} />
-        </Scroll>
-      </div>
+        <div className="App">
+          <header className="App-header">
+            <img src={swlogo} className="App-logo" alt="logo" />
+            <h1 className="App-title">Web App using SWAPI and React Exercise</h1>
+          </header>
+          <Options />
+          <Scroll>
+            <CardList datos={this.state.items} />
+          </Scroll>
+        </div>
     );
   }
 }

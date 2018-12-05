@@ -11,7 +11,7 @@ const Card = (props) => {
             <p>Género: {gender}</p>
 
         </div>
-    )
+    );
 }
 
 export default Card;

@@ -13,7 +13,7 @@ const CardList = ({datos}) => {
                 name={data[i].name}
                 height={data[i].height}
                 gender={data[i].gender}
-                />
+            />
         );
     });
         

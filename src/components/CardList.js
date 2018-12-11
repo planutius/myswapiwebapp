@@ -4,10 +4,7 @@ import Card from './Card';
 
 const CardList = (props) => { 
 
-    var resultsArray = [];
-    props.results.map((item, x) => {
-        resultsArray[x].push(item);
-    });
+    var resultsArray = props.datos.results;
  
   return (
     <div>

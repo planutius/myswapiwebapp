@@ -2,11 +2,12 @@ import React from 'react';
 import Card from './Card';
 
 
-const CardList = ({ datos }) => { 
+const CardList = (props) => { 
 
     var resultsArray = [];
-    for (var i in datos[0].results.length)
-        resultsArray.push([i, datos[0].results[i]]);
+    props.results.map((item, x) => {
+        resultsArray[x].push(item);
+    });
  
   return (
     <div>

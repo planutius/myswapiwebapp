@@ -2,20 +2,24 @@ import React from 'react';
 import Card from './Card';
 
 
-const CardList = (props) => { 
+const CardList = ({ datos }) => { 
 
-    var resultsArray = props.datos.results;
+  var x;  
+  var resultsArray = [];
+    for (x in datos.results) {
+      resultsArray.push(datos.results[x]);
+    }
  
   return (
     <div>
         {
-          resultsArray.map((data, i) => {
-              return (
+          resultsArray.map((data,i) => {
+            return (
                 <Card
                     id={i} 
-                    name={data[i].name}
-                    height={data[i].height}
-                    gender={data[i].gender}
+                    name={data.name}
+                    height={data.height}
+                    gender={data.gender} 
                 />
               );
           })

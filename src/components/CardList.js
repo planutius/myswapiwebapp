@@ -11,7 +11,7 @@ const CardList = ({ datos }) => {
     }
  
   return (
-    <div>
+    <div className="flex-auto">
         {
           resultsArray.map((data,i) => {
             return (

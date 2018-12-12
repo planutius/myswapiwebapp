@@ -5,7 +5,7 @@ import Options from '../components/Options';
 import Scroll from '../components/Scroll';
 import CardList from '../components/CardList';
 //import GetData from '../components/GetData';
-import {personajes} from './starwars';
+//import {personajes} from './starwars';
 
 class App extends Component {
   constructor() {
@@ -17,14 +17,13 @@ class App extends Component {
 
   componentDidMount() {
     
-    /*fetch('https://swapi.co/api/people/')
+    fetch('https://swapi.co/api/people/')
       .then(response => response.json())
       .then(data => {
         this.setState({
           items: data
         });
-      });*/
-      
+      });
 
   }
 
@@ -38,7 +37,7 @@ class App extends Component {
           </header>
           <Options />
           <Scroll>
-            <CardList datos={personajes} />
+            <CardList datos={this.state.items} />
           </Scroll>
         </div>
     );

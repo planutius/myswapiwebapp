@@ -4,7 +4,7 @@ const Card = (props) => {
     const {name, height, gender} = props;
 
     return (
-        <div className='tc mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10'>
+        <div className='tc bg-light-gray dib br3 ma2 grow bw1 shadow-5'>
             <img src={`https://robohash.org/${name}`} alt='Foto' />
             <h1>{name}</h1>
             <p>Altura: {height}</p>

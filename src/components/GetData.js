@@ -2,7 +2,7 @@
 //Usaremos este componente para cargar diferentes datos de SWAPI
 import React from 'react';
 
-const GetData = (url) => {
+const getData = (url) => {
    
     fetch(url)
     .then(response => response.json())
@@ -12,4 +12,4 @@ const GetData = (url) => {
   
 }
 
-export default GetData;
+export default getData;

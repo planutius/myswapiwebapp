@@ -4,20 +4,20 @@ import './App.css';
 import Options from '../components/Options';
 import Scroll from '../components/Scroll';
 import CardList from '../components/CardList';
-//import GetData from '../components/GetData';
-//import {personajes} from './starwars';
+import getData from '../components/GetData';
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
+      url:'https://swapi.co/api/',
       items: []
     }
   }
 
   componentDidMount() {
     
-    fetch('https://swapi.co/api/people/')
+    fetch(this.state.url)
       .then(response => response.json())
       .then(data => {
         this.setState({

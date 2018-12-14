@@ -1,9 +1,8 @@
 import React from 'react';
-import getData from './GetData';
 
 class Options extends React.Component {
    constructor() {
-       super()
+       super(props)
        this.state = {
            error: null,
            loaded: false,
@@ -41,7 +40,7 @@ class Options extends React.Component {
             {
                 Object.entries(items).map(([key, value]) => {
                    return (<button className=" f6 grow br-pill ph3 pv2 mb2 mt2 mh1 dib black button-opt" 
-                   key={key} onClick={value}> { key } </button>);
+                   key={key} onClick={clickOption}> { key } </button>);
                 })
             }
           </div>

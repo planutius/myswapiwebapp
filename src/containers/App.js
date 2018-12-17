@@ -25,22 +25,12 @@ class App extends Component {
     );
   }
   
-  onClickMenu(value){
+  onMenuClick = (event) => {
 
-    console.log(value);
+    this.setState({
+      url: event.target.value
+    });
 
-    /*this.setState({
-      url: event
-    });*/
-
-   /* fetch(value)
-    .then(response => response.json())
-    .then(results => {
-            this.setState({
-              items:  results
-            });    
-          }
-     );*/
   }
 
   render() {
@@ -51,7 +41,7 @@ class App extends Component {
             <img src={swlogo} className="App-logo" alt="logo" />
             <h1 className="App-title">Web App using SWAPI and React Exercise</h1>
           </header>
-          <Menu loadMenu={this.state.items} clickMenu={this.onClickMenu} />
+          <Menu MenuClick={this.onMenuClick} />
           <Scroll>
             <CardList datos={this.state.items} />
           </Scroll>

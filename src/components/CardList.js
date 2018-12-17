@@ -24,6 +24,7 @@ const CardList = ({ datos }) => {
             resultsArray.map((data,i) => {
               return (
                   <Card
+                      key={i}
                       id={i} 
                       name={data.name}
                       height={data.height}

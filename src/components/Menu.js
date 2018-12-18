@@ -17,8 +17,7 @@ class Menu extends React.Component {
     .then(results => {
           this.setState({
             loaded: true,
-            items: results,
-                                                                       
+            items: results                                                 
         });
    },
    error => {

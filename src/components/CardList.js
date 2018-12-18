@@ -27,8 +27,6 @@ const CardList = ({ datos }) => {
                       key={i}
                       id={i} 
                       name={data.name}
-                      height={data.height}
-                      gender={data.gender} 
                   />
                 );
             })

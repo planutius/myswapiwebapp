@@ -15,9 +15,10 @@ class Menu extends React.Component {
     fetch('https://swapi.co/api/')
     .then(response => response.json())
     .then(results => {
-        this.setState({
+          this.setState({
             loaded: true,
-            items: results
+            items: results,
+                                                                       
         });
    },
    error => {
@@ -31,7 +32,7 @@ class Menu extends React.Component {
   //Creo el navbar con los nombres y url de las propiedades principales de SWAPI
   render() {
       const { error, loaded, items} = this.state;
-     
+      
       if (error) {
        return <div>Error: {error.message}</div>;
      } else if (!loaded) {
@@ -39,10 +40,10 @@ class Menu extends React.Component {
      } else {
        return (
          <div className="App-Options">
-           {
+           {  
                Object.entries(items).map(([key, value]) => {
                   return (<button className=" f6 grow br-pill ph3 pv2 mb2 mt2 mh1 dib black button-opt" 
-                  key={key} value={value} onClick={this.props.MenuClick}> { key } </button>);
+                  key={key} value={value} onClick={this.props.menuClick}> { key } </button>);
                })
            }
          </div>

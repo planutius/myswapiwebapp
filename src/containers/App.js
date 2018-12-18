@@ -8,7 +8,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      url:'https://swapi.co/api/',
+      url:'https://swapi.co/api/people/',
       items: []
     }
   }
@@ -33,6 +33,17 @@ class App extends Component {
 
   }
 
+  componentDidUpdate() {
+    fetch(this.state.url)
+    .then(response => response.json())
+    .then(results => {
+            this.setState({
+              items:  results
+            });
+          }
+    );
+  }
+
   render() {
     
     return (
@@ -41,7 +52,7 @@ class App extends Component {
             <img src={swlogo} className="App-logo" alt="logo" />
             <h1 className="App-title">Web App using SWAPI and React Exercise</h1>
           </header>
-          <Menu MenuClick={this.onMenuClick} />
+          <Menu menuClick={this.onMenuClick} />
           <Scroll>
             <CardList datos={this.state.items} />
           </Scroll>

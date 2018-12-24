@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      url:'https://swapi.co/api/people/',
+      url:'',
+      option:'',
       items: []
     }
   }
@@ -28,7 +29,8 @@ class App extends Component {
   onMenuClick = (event) => {
 
     this.setState({
-      url: event.target.value
+      url: event.target.value,
+      option: event.target.key
     });
 
   }
@@ -38,7 +40,8 @@ class App extends Component {
     .then(response => response.json())
     .then(results => {
             this.setState({
-              items:  results
+              items:  results,
+
             });
           }
     );
@@ -52,9 +55,9 @@ class App extends Component {
             <img src={swlogo} className="App-logo" alt="logo" />
             <h1 className="App-title">Web App using SWAPI and React Exercise</h1>
           </header>
-          <Menu menuClick={this.onMenuClick} />
+          <Menu className="App-menu" menuClick={this.onMenuClick} />
           <Scroll>
-            <CardList datos={this.state.items} />
+            <CardList datos={this.state.items} option={this.state.option}/>
           </Scroll>
         </div>
     );

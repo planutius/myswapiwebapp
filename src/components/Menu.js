@@ -38,10 +38,10 @@ class Menu extends React.Component {
        return <div>Loading buttons . . . </div>;
      } else {
        return (
-         <div className="App-Options">
+         <div className="App-menu">
            {  
                Object.entries(items).map(([key, value]) => {
-                  return (<button className=" f6 grow br-pill ph3 pv2 mb2 mt2 mh1 dib black button-opt" 
+                  return (<button className=" f6 grow br-pill ph3 pv2 mb2 mt2 mh1 dib black button-menu" 
                   key={key} value={value} onClick={this.props.menuClick}> { key } </button>);
                })
            }

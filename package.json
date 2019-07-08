@@ -20,6 +20,7 @@
   "devDependencies": {
     "tachyons": "^4.11.1"
   },
+  "homepage": "https://planutius.github.io/myswapiwebapp",
   "browserslist": [
     ">0.2%",
     "not dead",

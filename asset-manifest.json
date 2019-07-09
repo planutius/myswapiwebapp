@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/myswapiwebapp/static/css/main.9a40202a.chunk.css",
+    "main.js": "/myswapiwebapp/static/js/main.96e01684.chunk.js",
+    "main.js.map": "/myswapiwebapp/static/js/main.96e01684.chunk.js.map",
+    "runtime~main.js": "/myswapiwebapp/static/js/runtime~main.7330d2af.js",
+    "runtime~main.js.map": "/myswapiwebapp/static/js/runtime~main.7330d2af.js.map",
+    "static/css/2.31dafeb2.chunk.css": "/myswapiwebapp/static/css/2.31dafeb2.chunk.css",
+    "static/js/2.f7527fa3.chunk.js": "/myswapiwebapp/static/js/2.f7527fa3.chunk.js",
+    "static/js/2.f7527fa3.chunk.js.map": "/myswapiwebapp/static/js/2.f7527fa3.chunk.js.map",
+    "index.html": "/myswapiwebapp/index.html",
+    "precache-manifest.00a170525f786d303a9b85ee726dac1a.js": "/myswapiwebapp/precache-manifest.00a170525f786d303a9b85ee726dac1a.js",
+    "service-worker.js": "/myswapiwebapp/service-worker.js",
+    "static/css/2.31dafeb2.chunk.css.map": "/myswapiwebapp/static/css/2.31dafeb2.chunk.css.map",
+    "static/css/main.9a40202a.chunk.css.map": "/myswapiwebapp/static/css/main.9a40202a.chunk.css.map",
+    "static/media/star-wars-logo.svg": "/myswapiwebapp/static/media/star-wars-logo.751a045f.svg"
+  }
+}
